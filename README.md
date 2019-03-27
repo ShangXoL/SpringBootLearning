@@ -93,6 +93,10 @@
 
 [ SpringBoot非官方教程 | 第二十四篇： springboot整合docker](http://blog.csdn.net/forezp/article/details/71024219)
 
+## 日志
+
+[springboot-log4j]
+
 ## 案例
 [ SpringBoot非官方教程 | 第二十五篇： 2小时学会springboot](http://blog.csdn.net/forezp/article/details/61472783)
 

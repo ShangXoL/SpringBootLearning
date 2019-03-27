@@ -1,0 +1,5 @@
+logging:
+    level:
+        root: error # ��������spriingboot�ܹ���info�������־
+        com.forezp.web: debug
+    file: ${user.home}/logs/hello.log # ����־��ӡ��ָ�����ļ���

@@ -1,13 +1,14 @@
 package com.forezp.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by fangzhipeng on 2017/4/18.
+ * fixed by shangxl on 2019/03/27
  */
 @ConfigurationProperties(prefix = "my")
-@Component
+//@Configuration其实内部就是@Component
+@Configuration
 public class ConfigBean {
 
     private String name;

@@ -16,8 +16,8 @@ public class AccountService2 {
 
     @Transactional
     public void transfer() throws RuntimeException{
-        accountMapper2.update(90,1);//用户1减10块 用户2加10块
+        accountMapper2.update(10,2);//用户1减10块 用户2加10块
         int i=1/0;
-        accountMapper2.update(110,2);
+        accountMapper2.update(11,3);
     }
 }

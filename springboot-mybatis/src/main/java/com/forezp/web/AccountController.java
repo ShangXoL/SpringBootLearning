@@ -17,17 +17,17 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @GetMapping(value = "/list")
     public List<Account> getAccounts() {
         return accountService.findAccountList();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/{id}")
     public Account getAccountById(@PathVariable("id") int id) {
         return accountService.findAccount(id);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    @PutMapping(value = "/{id}")
     public String updateAccount(@PathVariable("id") int id, @RequestParam(value = "name", required = true) String name,
                                 @RequestParam(value = "money", required = true) double money) {
         int t= accountService.update(name,money,id);
@@ -39,7 +39,7 @@ public class AccountController {
 
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/{id}")
     public String delete(@PathVariable(value = "id")int id) {
         int t= accountService.delete(id);
         if(t==1) {
@@ -50,7 +50,7 @@ public class AccountController {
 
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @PostMapping(value = "")
     public String postAccount(@RequestParam(value = "name") String name,
                               @RequestParam(value = "money") double money) {
 
